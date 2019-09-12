@@ -13,35 +13,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         UINavigationBar.appearance().backIndicatorImage = UIImage()
         UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage()
-        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -20, vertical: 0), for: UIBarMetrics.default)
-        
-
+//        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffs-et(horizontal: -20, vertical: 0), for: UIBarMetrics.default)
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        let nowPlayingCollectionNavigationController = storyboard.instantiateViewController(withIdentifier: Keys.StoryboardIdentifiers.MoviesCollectionNavigationController) as! UINavigationController
-        let nowPlayingCollectionViewController = nowPlayingCollectionNavigationController.topViewController as! MoviesCollectionViewController
+        guard let nowPlayingNavigationController = storyboard.instantiateViewController(withIdentifier: Keys.StoryboardIDs.MVNavigationController) as? UINavigationController else {
+            return false
+        }
+        
+        guard let nowPlayingCollectionViewController = nowPlayingNavigationController.topViewController as? MVCollectionViewController else {
+            return false
+        }
+        
         nowPlayingCollectionViewController.endpoint = Keys.DB.Endpoints.nowPlaying
-        nowPlayingCollectionNavigationController.tabBarItem.image = UIImage(named: "clapperboardSmall")
+        nowPlayingNavigationController.tabBarItem.image = UIImage(named: "clapperboardSmall")
         
-       
+        guard let topRatedNavigationController = storyboard.instantiateViewController(withIdentifier: Keys.StoryboardIDs.MVNavigationController) as? UINavigationController else {
+            return false
+        }
         
-        
-        let topRatedCollectionNavigationController = storyboard.instantiateViewController(withIdentifier: Keys.StoryboardIdentifiers.MoviesCollectionNavigationController) as! UINavigationController
-        let topRatedCollectionViewController = topRatedCollectionNavigationController.topViewController as! MoviesCollectionViewController
+        guard let topRatedCollectionViewController = topRatedNavigationController.topViewController as? MVCollectionViewController else {
+            return false
+        }
         topRatedCollectionViewController.endpoint = Keys.DB.Endpoints.topRated
-        topRatedCollectionNavigationController.tabBarItem.image = UIImage(named: "starSmall")
-        
+        topRatedNavigationController.tabBarItem.image = UIImage(named: "starSmall")
         
         let collectionTabBarController = UITabBarController()
-        collectionTabBarController.viewControllers = [nowPlayingCollectionNavigationController, topRatedCollectionNavigationController]
+        collectionTabBarController.viewControllers = [nowPlayingNavigationController, topRatedNavigationController]
         window?.rootViewController = collectionTabBarController
         window?.makeKeyAndVisible()
         
@@ -71,6 +75,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
 }
-

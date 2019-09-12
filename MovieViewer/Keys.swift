@@ -25,14 +25,12 @@ struct Keys {
             static let topRated = "top_rated"
         }
         
-        
     }
     
     struct Segues {
-        static let SegueToMoviesCollectionViewController = "SegueToMoviesCollectionViewController"
+        static let SegueToDetailsViewController = "SegueToDetailsViewController"
     }
-    struct StoryboardIdentifiers {
-        static let MoviesCollectionNavigationController = "MoviesCollectionNavigationController"
+    struct StoryboardIDs {
+        static let MVNavigationController = "MVNavigationController"
     }
 }
-

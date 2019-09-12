@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Detail Table View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="Dcx-6G-jCX">
             <objects>
-                <viewController id="2CR-ox-Usd" customClass="DetailTableViewController" customModule="MovieViewer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2CR-ox-Usd" customClass="MVDetailViewController" customModule="MovieViewer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bD3-Dn-0Dq"/>
                         <viewControllerLayoutGuide type="bottom" id="BYP-Dw-LS9"/>
@@ -26,29 +26,29 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0as-3o-xXI">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="736"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tld-CA-qPB">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="736"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <view alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qlF-1m-iiS">
-                                                <rect key="frame" x="12" y="736" width="390" height="582"/>
+                                            <view alpha="0.84999999999999998" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qlF-1m-iiS">
+                                                <rect key="frame" x="12" y="736" width="352" height="582"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QbY-Kc-fvn">
-                                                        <rect key="frame" x="8" y="8" width="374" height="27"/>
+                                                        <rect key="frame" x="8" y="8" width="336" height="27"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
-                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" fixedFrame="YES" text="Overview" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYj-rx-7g3">
-                                                        <rect key="frame" x="8" y="60" width="382" height="20"/>
+                                                        <rect key="frame" x="8" y="60" width="336" height="20"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </label>
                                                 </subviews>
@@ -59,7 +59,7 @@
                                 </subviews>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.1647058824" green="0.1647058824" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="K2W-LX-6lr"/>
                     <nil key="simulatedBottomBarMetrics"/>
@@ -74,12 +74,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z6s-rX-F3Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3882.608695652174" y="237.05357142857142"/>
+            <point key="canvasLocation" x="3796" y="-159.60591133004928"/>
         </scene>
-        <!--Movies Collection View Controller-->
+        <!--Collection View Controller-->
         <scene sceneID="YGM-u7-VTl">
             <objects>
-                <viewController id="h5J-LY-dad" customClass="MoviesCollectionViewController" customModule="MovieViewer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="h5J-LY-dad" customClass="MVCollectionViewController" customModule="MovieViewer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QCo-bG-Hgo"/>
                         <viewControllerLayoutGuide type="bottom" id="qli-wt-f5W"/>
@@ -120,7 +120,7 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="posterCollectionView" destination="NR7-Ip-bnG" id="Gyf-hO-6no"/>
-                                            <segue destination="2CR-ox-Usd" kind="push" id="tFu-7N-ZIa"/>
+                                            <segue destination="2CR-ox-Usd" kind="push" identifier="SegueToDetailsViewController" id="tFu-7N-ZIa"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -132,10 +132,10 @@
                                         <rect key="frame" x="102" y="0.0" width="171" height="46"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="warningDalpatPrajapati.png" translatesAutoresizingMaskIntoConstraints="NO" id="2w7-eq-cp8">
-                                                <rect key="frame" x="8" y="0.0" width="46" height="46"/>
+                                                <rect key="frame" x="8" y="0.0" width="46.666666666666664" height="46"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Network Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ac7-OL-pUE">
-                                                <rect key="frame" x="62" y="8" width="101" height="30"/>
+                                                <rect key="frame" x="62.66666666666665" y="8" width="100.33333333333331" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -188,12 +188,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UyU-AO-mpl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3108.6956521739135" y="-158.96739130434784"/>
+            <point key="canvasLocation" x="2860" y="-159"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="axc-b0-XAr">
             <objects>
-                <navigationController storyboardIdentifier="MoviesCollectionNavigationController" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="jbj-4f-2hK" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MVNavigationController" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="jbj-4f-2hK" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleAspectFit" backIndicatorImage="gridThomasHelbig.png" id="jnv-yB-nPf">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
