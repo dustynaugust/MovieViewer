@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        guard let nowPlayingNavigationController = storyboard.instantiateViewController(withIdentifier: Keys.StoryboardIDs.MVNavigationController) as? UINavigationController else {
+        guard let nowPlayingNavigationController = storyboard.instantiateViewController(withIdentifier: Resources.StoryboardIDs.MVNavigationController) as? UINavigationController else {
             return false
         }
         
@@ -31,17 +31,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return false
         }
         
-        nowPlayingCollectionViewController.endpoint = Keys.DB.Endpoints.nowPlaying
+        nowPlayingCollectionViewController.endpoint = Resources.Endpoints.nowPlaying
         nowPlayingNavigationController.tabBarItem.image = UIImage(named: "clapperboardSmall")
         
-        guard let topRatedNavigationController = storyboard.instantiateViewController(withIdentifier: Keys.StoryboardIDs.MVNavigationController) as? UINavigationController else {
+        guard let topRatedNavigationController = storyboard.instantiateViewController(withIdentifier: Resources.StoryboardIDs.MVNavigationController) as? UINavigationController else {
             return false
         }
         
         guard let topRatedCollectionViewController = topRatedNavigationController.topViewController as? MVCollectionViewController else {
             return false
         }
-        topRatedCollectionViewController.endpoint = Keys.DB.Endpoints.topRated
+        topRatedCollectionViewController.endpoint = Resources.Endpoints.topRated
         topRatedNavigationController.tabBarItem.image = UIImage(named: "starSmall")
         
         let collectionTabBarController = UITabBarController()

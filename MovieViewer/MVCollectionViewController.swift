@@ -47,7 +47,7 @@ class MVCollectionViewController: UIViewController, UICollectionViewDelegate, UI
         // Do any additional setup after loading the view.
     }
     private func createURL(endpoint: String, pageNumber: String) -> URL? {
-        return URL(string: "https://api.themoviedb.org/3/movie/\(endpoint)?api_key=\(Keys.DB.apiKey)&page=\(pageNumber)")
+        return URL(string: "https://api.themoviedb.org/3/movie/\(endpoint)?api_key=\(Keys.apiKey)&page=\(pageNumber)")
     }
     
     // Get stuff from network.
@@ -112,10 +112,10 @@ class MVCollectionViewController: UIViewController, UICollectionViewDelegate, UI
             // Below adds movie posters to view
             let movie = searchedForMovies![indexPath.row]
             
-            if let posterPath = movie[Keys.DB.Results.posterPath] as? String {
+            if let posterPath = movie[Resources.Results.posterPath] as? String {
                 // Different url for smal & large images.
-                let smallImageUrl = URL(string: Keys.DB.smallBaseURL + posterPath)
-                let largeImageUrl = URL(string: Keys.DB.largeBaseURL + posterPath)
+                let smallImageUrl = URL(string: Keys.smallBaseURL + posterPath)
+                let largeImageUrl = URL(string: Keys.largeBaseURL + posterPath)
                 
                 // Below loads and sets the small then gets the large image.
                 let smallImageRequest = URLRequest(url: smallImageUrl!)
@@ -193,7 +193,7 @@ class MVCollectionViewController: UIViewController, UICollectionViewDelegate, UI
         // item should NOT be included
         searchedForMovies = searchText.isEmpty ? movies : movies.filter({(movie: NSDictionary) -> Bool in
             // If dataItem matches the searchText, return true to include it
-            guard let movies = movie[Keys.DB.Results.title] as? String else {
+            guard let movies = movie[Resources.Results.title] as? String else {
                 return false
             }
             let range = movies.range(of: searchText, options: .caseInsensitive)
@@ -237,7 +237,7 @@ class MVCollectionViewController: UIViewController, UICollectionViewDelegate, UI
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == Keys.Segues.SegueToDetailsViewController  {
+        if segue.identifier == Resources.Segues.SegueToDetailsViewController  {
             guard let cell = sender as? UICollectionViewCell else {
                 return
             }

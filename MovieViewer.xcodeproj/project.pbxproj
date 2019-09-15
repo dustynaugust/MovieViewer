@@ -18,6 +18,7 @@
 		3E1ED6B21C53186100D4CDB5 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1ED6B11C53186100D4CDB5 /* MovieCollectionViewCell.swift */; };
 		3E32CEA11C584BF1001CB409 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E32CE9F1C584BF1001CB409 /* Main.storyboard */; };
 		3E37CFAB1C53249900F29C67 /* MVCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E37CFAA1C53249900F29C67 /* MVCollectionViewController.swift */; };
+		3E380F15232ED96B009AEFDA /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E380F14232ED96B009AEFDA /* Resources.swift */; };
 		3E7176B01C54B589009B8753 /* gridThomasHelbig.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E7176AD1C54B589009B8753 /* gridThomasHelbig.png */; };
 		3E7176B11C54B589009B8753 /* warningDalpatPrajapati.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E7176AE1C54B589009B8753 /* warningDalpatPrajapati.png */; };
 		3EC32B401C56E832000A6E29 /* MVDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC32B3F1C56E832000A6E29 /* MVDetailViewController.swift */; };
@@ -38,6 +39,7 @@
 		3E1ED6B11C53186100D4CDB5 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		3E32CEA01C584BF1001CB409 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3E37CFAA1C53249900F29C67 /* MVCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVCollectionViewController.swift; sourceTree = "<group>"; };
+		3E380F14232ED96B009AEFDA /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		3E7176AD1C54B589009B8753 /* gridThomasHelbig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gridThomasHelbig.png; sourceTree = SOURCE_ROOT; };
 		3E7176AE1C54B589009B8753 /* warningDalpatPrajapati.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = warningDalpatPrajapati.png; sourceTree = SOURCE_ROOT; };
 		3EC32B3F1C56E832000A6E29 /* MVDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVDetailViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				3E1B584B2329BF6A00DD9C4B /* Keys.swift */,
+				3E380F14232ED96B009AEFDA /* Resources.swift */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				3EC32B401C56E832000A6E29 /* MVDetailViewController.swift in Sources */,
 				002984AC1C4EF988008E705F /* AppDelegate.swift in Sources */,
 				3E37CFAB1C53249900F29C67 /* MVCollectionViewController.swift in Sources */,
+				3E380F15232ED96B009AEFDA /* Resources.swift in Sources */,
 				3E1B584C2329BF6A00DD9C4B /* Keys.swift in Sources */,
 				3E1ED6B21C53186100D4CDB5 /* MovieCollectionViewCell.swift in Sources */,
 			);
