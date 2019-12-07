@@ -1,9 +1,5 @@
-# Project 1 and 2 - MovieViewer
-MovieViewer is a movies app displaying box office and top rental DVDs using [The Movie Database API](http://docs.themoviedb.apiary.io/#). Made for CodePath University weeks 1 and 2.
-
-Time spent: ~30 hours
-
-** Please Note:** Sicne this project was updated to Swift3 for the Spring 2017 iOS Cohort the Walkthrough reflects a combination of both weeks 1 and 2. Each week's User Stories are separated by line breaks for clarity.
+# MovieViewer
+MovieViewer is a movies app displaying box office and top rental DVDs using [The Movie Database API](https://developers.themoviedb.org/3). Made for CodePath University weeks 1 and 2.
 
 ## User Stories
 
@@ -29,8 +25,6 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 - [X] User may switch between collection view or table view.
 - [X] Auto layout on all pages except the Details page. Scroll view and auto layout beat me here!
-<br>
-<br>
 - [X] User may switch between TableView and CollectionView via a TabBarController.
 - [X] Auto layout on all pages except the Details page. Scroll view and auto layout beat me here!
 - [X] User may scroll infinitely. (Table view only right now)
